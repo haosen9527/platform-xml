@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<_ACTOR>
+    <_P_NAME>observer</_P_NAME>
+    <_PLATFORM>
+        <UAV>
+            <_LOGIC_AND>
+                <_P_ENDURANCE>
+                    <_LARGER_THAN>1</_LARGER_THAN>
+                </_P_ENDURANCE>
+                <_P_SPEED>
+                    <_LARGER_THAN>199</_LARGER_THAN>
+                </_P_SPEED>
+                <FIXEDWING>1</FIXEDWING>
+            </_LOGIC_AND>
+        </UAV>
+    </_PLATFORM>
+    <_SENSOR>
+        <_P_BIND>visible_light_img_1</_P_BIND>
+        <VISUAL>
+            <_LOGIC_AND>
+                <_P_FRAME_RATE>90</_P_FRAME_RATE>
+                <VISIBLE_LIGHT>1024768</VISIBLE_LIGHT>
+            </_LOGIC_AND>
+        </VISUAL>
+    </_SENSOR>
+</_ACTOR>

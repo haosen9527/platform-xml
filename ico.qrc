@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ICO/帮助页.png</file>
+        <file>ICO/代码.png</file>
+        <file>ICO/空白页.png</file>
+        <file>ICO/模板.png</file>
+        <file>ICO/粘贴.png</file>
+        <file>ICO/树型.png</file>
+        <file>ICO/增加行.png</file>
+    </qresource>
+</RCC>

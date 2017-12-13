@@ -24,8 +24,34 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        role.cpp
+        role.cpp \
+    dbxml_sql.cpp \
+    create_new_xml.cpp \
+    treeview.cpp
 
-HEADERS  += role.h
+HEADERS  += role.h \
+    dbxml_sql.h \
+    file_list.h \
+    create_new_xml.h \
+    treeview.h
 
-FORMS    += role.ui
+FORMS    += role.ui \
+    create_new_xml.ui \
+    treeview.ui
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../dbxml-6.1.4/install/lib/release/ -ldb_cxx-6.2
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../dbxml-6.1.4/install/lib/debug/ -ldb_cxx-6.2
+else:unix: LIBS += -L$$PWD/../../dbxml-6.1.4/install/lib/ -ldb_cxx-6.2
+
+INCLUDEPATH += $$PWD/../../dbxml-6.1.4/install/include
+DEPENDPATH += $$PWD/../../dbxml-6.1.4/install/include
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../dbxml-6.1.4/install/lib/release/ -ldbxml-6.1
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../dbxml-6.1.4/install/lib/debug/ -ldbxml-6.1
+else:unix: LIBS += -L$$PWD/../../dbxml-6.1.4/install/lib/ -ldbxml-6.1
+
+INCLUDEPATH += $$PWD/../../dbxml-6.1.4/install/include
+DEPENDPATH += $$PWD/../../dbxml-6.1.4/install/include
+
+RESOURCES += \
+    ico.qrc
