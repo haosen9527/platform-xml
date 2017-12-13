@@ -1205,9 +1205,6 @@ QStringList templet_tag_lib;
 
 QStringList new_tag_lib;
 
-
-
-
 //查找新标签
 bool Role::has_new_tagname(QDomDocument templet,QDomDocument temp)
 {
