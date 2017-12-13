@@ -59,6 +59,8 @@ Role::Role(QWidget *parent) :
     temp_memry.setContent(X);
     //template load
     //openXML_mem(temp_memry);
+    //存储模板tagname
+    open_check_xml_only(temp_memry);
     /***********************************************************************************************/
 
     connect(ui->pushButton_open, SIGNAL(clicked()), this, SLOT(openFile()));
@@ -241,6 +243,12 @@ void Role::listDom(QDomElement& docElem, QTreeWidgetItem * pItem)
                     }
                     item->setText(1,add_fuhao);
                     element.removeChild(node);
+                }
+                if(element.tagName()!="_P_NAME"&&element.tagName()!="_LOGI_AND"&&element.tagName()!="_LOGI_OR"&&element.tagName()!="_LARGER_THAN")
+
+                if(-1==temp_tagname.indexOf(element.tagName()))
+                {
+                    item->setTextColor(0,QColor(255, 0, 0,255));
                 }
 
                     item->setText(0, element.tagName());
