@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>ICO/copy.png</file>
+        <file>ICO/help.png</file>
+        <file>ICO/openfile.png</file>
+        <file>ICO/refresh.png</file>
+        <file>ICO/save.png</file>
+        <file>ICO/setting.png</file>
+        <file>ICO/xml.png</file>
+    </qresource>
+</RCC>
